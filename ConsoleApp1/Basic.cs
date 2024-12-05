@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
@@ -132,13 +133,59 @@ namespace ConsoleApp1
 
             //ISNullorEmpty
 
-            string str = null;
-            Console.WriteLine(str);
-            if (str == null || str ==" ")
+            /* string str = null;
+             Console.WriteLine(str);
+             if (str == null || str ==" ")
+             {
+                 Console.WriteLine("String  is Empty");
+             }
+             Console.WriteLine(str);*/
+
+            /*string str = "This is a String";
+            int countWords = 0;
+            string[] words = str.Split(' ');
+
+            for(int i = 0; i< words.Length; i++)
             {
-                Console.WriteLine("String  is Empty");
+                countWords++;
             }
-            Console.WriteLine(str);
+            Console.WriteLine(countWords);*/
+
+            /* Console.WriteLine("Enter a Sentance");
+             string str = Console.ReadLine();
+             string[] words = str.Split(' ');
+             string LongetWords = " ";
+             int MaxLength = 0;
+
+             for(int i =0; i< words.Length; i++)
+             {
+                 if (words[i].Length > MaxLength)
+                 {
+                     MaxLength = words[i].Length;
+                     LongetWords = words[i];
+                 }
+             }
+             Console.WriteLine("Longest Word = " + LongetWords);*/
+
+            /*string str = "Hello to all";
+            char targetChar = 'l';
+            int count = 0;
+            foreach(Char c in str)
+            {
+                if(c == targetChar)
+                {
+                    count++;
+                }
+            }
+            Console.WriteLine("The charcter "+targetChar +" " + "apperas "+ " "+count +" "+"Times" );*/
+            string message = "  Hello World";
+            string str1 = message.TrimStart();
+            Console.WriteLine(str1);
+
+            string message1 = "Hello World    ";
+            string message2 = "By all";
+            string str2= string.Concat(message1.TrimEnd()+" "+ message2);
+            Console.WriteLine(str2);
         }
     }
 }

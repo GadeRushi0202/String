@@ -13,12 +13,12 @@ namespace ConsoleApp1
         {
             Console.WriteLine("Enter a String");
             string str = Console.ReadLine();
-            ;// string str = "Hello Wrold";
-            string reverseStr = " ";
+            // string str = "Hello Wrold";
+            string reverseStr = "";
 
             for (int i = str.Length - 1; i >= 0; i--)
             {
-                reverseStr += str[i];
+                reverseStr = reverseStr + str[i];
             }
             Console.WriteLine(reverseStr);
         }
